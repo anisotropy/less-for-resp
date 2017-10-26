@@ -1,0 +1,38 @@
+{
+  "name": "example-less-mixin-for-responsive-design",
+  "version": "0.0.0",
+  "description": "Example of less-mixin-for-reponsive-design",
+  "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server --progress",
+    "watch": "webpack --watch",
+    "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress"
+  },
+  "author": "anisotropy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anisotropy/less-mixins-for-responsive-design"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.0.1",
+    "babel-core": "^6.7.6",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "less": "^2.6.1",
+    "less-loader": "^4.0.3",
+    "postcss-loader": "^2.0.3",
+    "precss": "^2.0.0",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.9",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "less-mixins-for-responsive-design",
+  "version": "0.0.0",
+  "author": "anisotropy",
+  "description": "LESS mixins for responsive design",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anisotropy/less-mixins-for-responsive-design"
+  },
+  "homepage": "https://anisotropy.github.io/less-mixins-for-responsive-design/",
+  "main": "index.less",
+  "keywords": [
+    "less",
+    "responsive"
+  ]
+}
