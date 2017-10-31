@@ -1,11 +1,12 @@
-.resp-linear(@prop; @values; @scrn: 320 768 1024 1600; @base: 0px; @op: ~"+"; @unit: px) {
+.resp-linear(@prop; @values; @scrn: 320 768 1024 1600; @base: 0; @op: ~"+") {
+  @b: unit(@base, px);
   .output(@index) when (@index < length(@values)) {
     @m: (extract(@values, @index+1) - extract(@values, @index))/(extract(@scrn, @index+1) - extract(@scrn, @index));
-    @a: unit(extract(@values, @index) - @m*extract(@scrn, @index), @unit);
-    @{prop}: calc(@base @op ~"100vw *" @m @op @a);
+    @a: unit(extract(@values, @index) - @m*extract(@scrn, @index), px);
+    @{prop}: calc(@b @op 100vw ~"*" @m @op @a);
   }
   .output(@index) when (@index = length(@values)) {
-    @{prop}: calc(@base @op unit(extract(@values, length(@values)), @unit));
+    @{prop}: calc(@b @op unit(extract(@values, length(@values)), px));
   }
   .loop(@index) when (@index > 0) {
     .loop((@index - 1));
@@ -13,5 +14,6 @@
       .output(@index);
     }
   }
+  @{prop}: calc(@b @op unit(extract(@values, 1), px));
   .loop(length(@values));
 }

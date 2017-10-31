@@ -1,10 +1,10 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Box from './components/Box';
+import Demo from './components/Demo';
 
 import './style/style.less';
 
 render(
-  <Box />,
+  <Demo />,
   document.getElementById('root')
 );

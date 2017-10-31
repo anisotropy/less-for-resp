@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  background-color: #252830;
+}
+h1 {
+  text-align: center;
+}
+.box {
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.box + .description {
+  margin-top: 1em;
+}
+.box__content {
+  padding-top: 1em;
+  text-align: center;
+}
+.description {
+  text-align: center;
+}
+.description__size table {
+  margin: 0 auto;
+  text-align: left;
+}
+.description__size + .description__code {
+  margin-top: 2em;
+}
+.description__code {
+  display: inline-block;
+  text-align: left;
+}
+.description__code pre {
+  margin: 0;
+  padding: 1em !important;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 10px;
+}
+.description__code code {
+  font-size: inherit;
+  font-family: inherit;
+}
+.box--respstyle {
+  width: calc(0px + 100px);
+  height: calc(500px - 100px);
+  font-size: calc(0px + 30px);
+  background-color: #f4cc70;
+}
+@media screen and (min-width: 550px) {
+  .box--respstyle {
+    width: calc(0px + 100vw * 0.5 + -175px);
+  }
+}
+@media screen and (min-width: 700px) {
+  .box--respstyle {
+    width: calc(0px + 100vw * 0.5 + -175px);
+  }
+}
+@media screen and (min-width: 850px) {
+  .box--respstyle {
+    width: calc(0px + 100vw * 0.14285714 + 128.57142857px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .box--respstyle {
+    width: calc(0px + 300px);
+  }
+}
+@media screen and (min-width: 550px) {
+  .box--respstyle {
+    height: calc(500px - 100vw * 0.5 - -175px);
+  }
+}
+@media screen and (min-width: 700px) {
+  .box--respstyle {
+    height: calc(500px - 100vw * 0.5 - -175px);
+  }
+}
+@media screen and (min-width: 850px) {
+  .box--respstyle {
+    height: calc(500px - 100vw * 0.14285714 - 128.57142857px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .box--respstyle {
+    height: calc(500px - 300px);
+  }
+}
+@media screen and (min-width: 550px) {
+  .box--respstyle {
+    font-size: calc(0px + 100vw * -0.06666667 + 66.66666667px);
+  }
+}
+@media screen and (min-width: 700px) {
+  .box--respstyle {
+    font-size: calc(0px + 100vw * 0.2 + -120px);
+  }
+}
+@media screen and (min-width: 850px) {
+  .box--respstyle {
+    font-size: calc(0px + 50px);
+  }
+}
+@media screen and (min-width: 550px) {
+  .box--respstyle {
+    background-color: #f4cc70;
+  }
+}
+@media screen and (min-width: 700px) {
+  .box--respstyle {
+    background-color: #de7a22;
+  }
+}
+@media screen and (min-width: 850px) {
+  .box--respstyle {
+    background-color: #20948b;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .box--respstyle {
+    background-color: #6ab187;
+  }
+}

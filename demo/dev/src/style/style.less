@@ -1,7 +1,57 @@
-@import '~less-mixins-for-responsive-design/index';
+//@import '~less-for-resp/index';
+@import '../../../../index';
 
+body {
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  background-color: #252830
+}
+h1 {
+  text-align: center;
+}
 .box {
-  width: 300px;
-  .resp-linear(height; 300 400 500 600);
-  .resp-step(background-color; blue red yellow green);
+  margin: 0 auto;
+  border-radius: 20px;
+  & + .description {
+    margin-top: 1em;
+  }
+}
+.box__content {
+  padding-top: 1em;
+  text-align: center;
+}
+.description {
+  text-align: center;
+}
+.description__size {
+  table {
+    margin: 0 auto;
+    text-align: left;
+  }
+  & + .description__code {
+    margin-top: 2em;
+  }
+}
+.description__code {
+  display: inline-block;
+  text-align: left;
+}
+.description__code pre {
+  margin: 0;
+  padding: 1em !important;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 10px;
+}
+.description__code code {
+  font-size: inherit;
+  font-family: inherit;
+}
+.box--respstyle {
+  @breakpoints: 550 700 850 1200;
+  .resp-linear(width; 100 175 250 300; @breakpoints);
+  .resp-linear(height; 100 175 250 300; @breakpoints; 500; ~"-");
+  .resp-linear(font-size; 30 20 50; @breakpoints);
+  .resp-step(background-color; #f4cc70 #de7a22 #20948b #6ab187; @breakpoints);
 }

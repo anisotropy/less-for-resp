@@ -1,5 +1,5 @@
 {
-  "name": "less-mixins-for-responsive-design",
+  "name": "less-for-resp",
   "version": "0.0.0",
   "author": "anisotropy",
   "description": "LESS mixins for responsive design",
@@ -10,6 +10,10 @@
   },
   "homepage": "https://anisotropy.github.io/less-mixins-for-responsive-design/",
   "main": "index.less",
+  "files": [
+    "src/",
+    "index.less"
+  ],
   "keywords": [
     "less",
     "responsive"

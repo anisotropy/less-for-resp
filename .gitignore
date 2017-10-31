@@ -2,4 +2,3 @@
 .*.swp
 npm-debug.log
 node_modules/
-example/script/script.js
