@@ -1,8 +1,8 @@
-.resp-linear(@prop; @values; @scrn: 320 768 1024 1600; @base: 0; @op: ~"+") {
+.resp-linear(@prop; @values; @bps: 320 768 1024 1600; @base: 0; @op: ~"+") {
   @b: unit(@base, px);
   .output(@index) when (@index < length(@values)) {
-    @m: (extract(@values, @index+1) - extract(@values, @index))/(extract(@scrn, @index+1) - extract(@scrn, @index));
-    @a: unit(extract(@values, @index) - @m*extract(@scrn, @index), px);
+    @m: (extract(@values, @index+1) - extract(@values, @index))/(extract(@bps, @index+1) - extract(@bps, @index));
+    @a: unit(extract(@values, @index) - @m*extract(@bps, @index), px);
     @{prop}: calc(@b @op 100vw ~"*" @m @op @a);
   }
   .output(@index) when (@index = length(@values)) {
@@ -10,7 +10,7 @@
   }
   .loop(@index) when (@index > 0) {
     .loop((@index - 1));
-    @media screen and (min-width: unit(extract(@scrn, @index), px)) {
+    @media screen and (min-width: unit(extract(@bps, @index), px)) {
       .output(@index);
     }
   }
