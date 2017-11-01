@@ -6,9 +6,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anisotropy/less-mixins-for-responsive-design"
+    "url": "https://github.com/anisotropy/less-for-resp"
   },
-  "homepage": "https://anisotropy.github.io/less-mixins-for-responsive-design/",
+  "homepage": "https://anisotropy.github.io/less-for-resp",
   "main": "index.less",
   "files": [
     "src/",
