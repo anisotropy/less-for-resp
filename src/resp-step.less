@@ -1,7 +1,7 @@
-.resp-step(@prop; @values; @scrn: 320 768 1024 1600) {
+.resp-step(@prop; @values; @bpx: 320 768 1024 1600) {
   .loop(@index) when (@index > 0) {
     .loop((@index - 1));
-    @media screen and (min-width: unit(extract(@scrn, @index), px)) {
+    @media screen and (min-width: unit(extract(@bpx, @index), px)) {
       @{prop}: extract(@values, @index);
     }
   }

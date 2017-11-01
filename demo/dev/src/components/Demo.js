@@ -6,7 +6,7 @@ import {tomorrowNightBright} from 'react-syntax-highlighter/dist/styles';
 const lessCode =
 `@breakpoints: 550 700 850 1200;
 .resp-linear(width; 100 175 250 300; @breakpoints);
-.resp-linear(height; 100 175 250 300; @breakpoints; 500; ~"-");
+.resp-linear(height; 100 175 250 300; @breakpoints; 500; -1);
 .resp-linear(font-size; 30 20 50; @breakpoints);
 .resp-step(background-color; #f4cc70 #de7a22 #20948b #6ab187; @breakpoints);`;
 

@@ -1,19 +1,18 @@
-.resp-linear(@prop; @values; @bps: 320 768 1024 1600; @base: 0; @op: ~"+") {
-  @b: unit(@base, px);
+.resp-linear(@prop; @values; @scrn: 320 768 1024 1600; @offset: 0; @mult: 1) {
   .output(@index) when (@index < length(@values)) {
-    @m: (extract(@values, @index+1) - extract(@values, @index))/(extract(@bps, @index+1) - extract(@bps, @index));
-    @a: unit(extract(@values, @index) - @m*extract(@bps, @index), px);
-    @{prop}: calc(@b @op 100vw ~"*" @m @op @a);
+    @m: @mult * (extract(@values, @index+1) - extract(@values, @index))/(extract(@scrn, @index+1) - extract(@scrn, @index));
+    @a: unit(@offset + @mult * extract(@values, @index) - @m*extract(@scrn, @index), px);
+    @{prop}: calc(100vw ~"*" @m ~"+" @a);
   }
   .output(@index) when (@index = length(@values)) {
-    @{prop}: calc(@b @op unit(extract(@values, length(@values)), px));
+    @{prop}: calc(unit(@offset + @mult * extract(@values, length(@values)), px));
   }
   .loop(@index) when (@index > 0) {
     .loop((@index - 1));
-    @media screen and (min-width: unit(extract(@bps, @index), px)) {
+    @media screen and (min-width: unit(extract(@scrn, @index), px)) {
       .output(@index);
     }
   }
-  @{prop}: calc(@b @op unit(extract(@values, 1), px));
+  @{prop}: calc(unit(@offset + @mult * extract(@values, 1), px));
   .loop(length(@values));
 }
