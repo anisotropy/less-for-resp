@@ -15,7 +15,7 @@ npm install --save less-for-resp
 ## Usage
 
 ```less
-@import '~less-for-resp/index';
+@import '~less-for-resp/index'; // Or @import '[directory]/index'
 
 div {
   .resp-linear(width; 100 200 500 800);
@@ -47,4 +47,4 @@ This mixin outputs the value for a given breakpoint. In this case of `.resp-step
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE.txt)

@@ -44,64 +44,64 @@ h1 {
   font-family: inherit;
 }
 .box--respstyle {
-  width: calc(0px + 100px);
-  height: calc(500px - 100px);
-  font-size: calc(0px + 30px);
+  width: calc(100px);
+  height: calc(400px);
+  font-size: calc(30px);
   background-color: #f4cc70;
 }
 @media screen and (min-width: 550px) {
   .box--respstyle {
-    width: calc(0px + 100vw * 0.5 + -175px);
+    width: calc(100vw * 0.5 + -175px);
   }
 }
 @media screen and (min-width: 700px) {
   .box--respstyle {
-    width: calc(0px + 100vw * 0.5 + -175px);
+    width: calc(100vw * 0.5 + -175px);
   }
 }
 @media screen and (min-width: 850px) {
   .box--respstyle {
-    width: calc(0px + 100vw * 0.14285714 + 128.57142857px);
+    width: calc(100vw * 0.14285714 + 128.57142857px);
   }
 }
 @media screen and (min-width: 1200px) {
   .box--respstyle {
-    width: calc(0px + 300px);
+    width: calc(300px);
   }
 }
 @media screen and (min-width: 550px) {
   .box--respstyle {
-    height: calc(500px - 100vw * 0.5 - -175px);
+    height: calc(100vw * -0.5 + 675px);
   }
 }
 @media screen and (min-width: 700px) {
   .box--respstyle {
-    height: calc(500px - 100vw * 0.5 - -175px);
+    height: calc(100vw * -0.5 + 675px);
   }
 }
 @media screen and (min-width: 850px) {
   .box--respstyle {
-    height: calc(500px - 100vw * 0.14285714 - 128.57142857px);
+    height: calc(100vw * -0.14285714 + 371.42857143px);
   }
 }
 @media screen and (min-width: 1200px) {
   .box--respstyle {
-    height: calc(500px - 300px);
+    height: calc(200px);
   }
 }
 @media screen and (min-width: 550px) {
   .box--respstyle {
-    font-size: calc(0px + 100vw * -0.06666667 + 66.66666667px);
+    font-size: calc(100vw * -0.06666667 + 66.66666667px);
   }
 }
 @media screen and (min-width: 700px) {
   .box--respstyle {
-    font-size: calc(0px + 100vw * 0.2 + -120px);
+    font-size: calc(100vw * 0.2 + -120px);
   }
 }
 @media screen and (min-width: 850px) {
   .box--respstyle {
-    font-size: calc(0px + 50px);
+    font-size: calc(50px);
   }
 }
 @media screen and (min-width: 550px) {
