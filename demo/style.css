@@ -10,6 +10,8 @@ h1 {
 .box {
   margin: 0 auto;
   border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .box + .description {
   margin-top: 1em;
