@@ -1,5 +1,4 @@
 import React, {PureComponent} from 'react';
-import Box from './Box';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {tomorrowNightBright} from 'react-syntax-highlighter/dist/styles';
 
@@ -26,37 +25,48 @@ class Demo extends PureComponent {
     }
   }
   setSize(){
-    this.setState({wWidth: window.innerWidth, boxHeight: this.box.getHeight(), boxWidth: this.box.getWidth()});
+    this.setState({wWidth: window.innerWidth, boxHeight: this.box.clientHeight, boxWidth: this.box.clientWidth});
   }
   render(){
+    const box = (
+      <div className="box box--respstyle" ref={(inst) => {this.box = inst;}}>
+        <div className="box__content">Text</div>
+      </div>
+    );
+    const descriptionSize = (
+      <div className="description__size">
+        <table>
+          <tbody>
+            <tr>
+              <td>Screen width:</td>
+              <td>{this.state.wWidth}px</td>
+            </tr>
+            <tr>
+              <td>Box width:</td>
+              <td>{this.state.boxWidth}px</td>
+            </tr>
+            <tr>
+              <td>Box height:</td>
+              <td>{this.state.boxHeight}px</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    );
+    const descriptionCode = (
+      <div className="description__code">
+        <SyntaxHighlighter language='less' style={tomorrowNightBright}>
+          {lessCode}
+        </SyntaxHighlighter>
+      </div>
+    );
     return (
       <div className="demo">
         <h1>LESS mixins for responsive design</h1>
-        <Box ref={(inst) => {this.box = inst;}}/>
+        {box}
         <div className="description">
-          <div className="description__size">
-            <table>
-              <tbody>
-                <tr>
-                  <td>Screen width:</td>
-                  <td>{this.state.wWidth}px</td>
-                </tr>
-                <tr>
-                  <td>Box width:</td>
-                  <td>{this.state.boxWidth}px</td>
-                </tr>
-                <tr>
-                  <td>Box height:</td>
-                  <td>{this.state.boxHeight}px</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="description__code">
-            <SyntaxHighlighter language='less' style={tomorrowNightBright}>
-              {lessCode}
-            </SyntaxHighlighter>
-          </div>
+          {descriptionSize}
+          {descriptionCode}
         </div>
       </div>
     );
