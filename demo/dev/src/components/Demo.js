@@ -39,7 +39,7 @@ class Demo extends PureComponent {
           <tbody>
             <tr>
               <td>Page width:</td>
-              <td>{window.innerWidth}px</td>
+              <td>{this.state.wWidth}px</td>
             </tr>
             <tr>
               <td>Box width:</td>
